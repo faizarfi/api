@@ -11,9 +11,11 @@ app.use(express.json());
 // Import & daftarkan router
 const authRoutes = require('../routes/auth');
 const userRoutes = require('../routes/users');
+const chatRoutes = require('../routes/chat');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/chat', chatRoutes);
 
 // Endpoint tes utama
 app.get('/', (req, res) => {
